@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    
+    <!-- Pure Counter JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
         <div class="logo">codeZcope</div>
         <nav class="nav">
@@ -17,6 +28,23 @@
           <a href="#">FAQs</a>
           <a href="#" class="btn">Book a Call</a>
         </nav>
-      </header>
+    </header>
+
+    <main class="main-container">
+        <div class="main-image">
+            <img src="your-image-path.jpg" alt="Main Image">
+        </div>
+    
+        <div class="main-description">
+            <h1>Achieve Your Royal Status with codeZcope</h1>
+            <span id="custom-counter" class="purecounter"></span>
+        </div>
+    </main>
+       
+
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <!-- Linking js file -->
+    <script src="./index.js"></script>
+
 </body>
 </html>
