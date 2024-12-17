@@ -28,3 +28,68 @@ document.addEventListener("DOMContentLoaded", function () {
         counterElement.textContent = current.toLocaleString(); // Update the display
     }, interval);
 });
+
+// Select all video elements
+const videos = document.querySelectorAll('.video-item video');
+
+videos.forEach((video) => {
+  // Play video on hover
+  video.addEventListener('mouseenter', () => {
+    video.play();
+  });
+
+  // Pause video when hover ends
+  video.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0; 
+  });
+});
+
+// Scroll Up Button Functionality
+const scrollUpBtn = document.getElementById("scroll-up-btn");
+
+// Show or hide the button based on scroll position
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollUpBtn.classList.add("visible");
+  } else {
+    scrollUpBtn.classList.remove("visible");
+  }
+});
+
+// Scroll to top smoothly when button is clicked
+scrollUpBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// Select all video elements
+const video = document.querySelectorAll('.client_video_display video');
+
+video.forEach((video) => {
+  // Play video on hover
+  video.addEventListener('mouseenter', () => {
+    video.play();
+  });
+
+  // Pause video when hover ends
+  video.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0; 
+  });
+});
+
+const faqItems = document.querySelectorAll('.faq_item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.fa-solid');
+
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+        icon.classList.toggle('active');
+      });
+    });
